@@ -3,7 +3,7 @@ contains the tutorial i followed to learn the basics of python for my NEA.
 
 https://www.youtube.com/watch?v=eWRfhZUzrAc&ab_channel=freeCodeCamp.org
 
-currently:
+currently: 2:23:03
 
 In my read me I will take the notes I learned from the video. 
 
@@ -137,3 +137,87 @@ to access a variable which is local in a function that doesn't have it as a para
 
 you are also able to use nested functions if you wish to do repition within the parent function.
 If you use nested functions, and you wish to call the nested function, you can do so, without doing the previously lines of code before that function is instantiated. This is useful because the parent function may reset a variable to 0, which you dont want to do.
+
+# <ins> OOP + more stuff (OOP.py) </ins> #
+
+# 1 #
+
+objects of course have attributes and methods.
+Every data strcuture is an object in python; lists, tuples and dictionaries are all objects.
+This means manipulating them is nothing different from what we have learnt already.
+
+# 2 #
+
+classes are used to create a template. You can then instantiate classes as objects, which take up the template/skeleton created within the class.
+
+you can use __init__(self, ...) to create a costructor for a class. Whenever you create a variable too that is within the class you should preface it with 'self.' to show it is the variable within that class.
+
+Similar to learning OOP in Java, you can use parent classes and child classes to inherit different methods.
+
+# 3 #
+
+Modules in python are just files which can be imported into different files so they can be accessed and used. What you can do is import python files by simply adding 'import x' where x is the name of the file to gain any functions defined in that module.
+If you then have a folder that you want to use but the main file is outside the folder, you can add a __init__ file to the folder, allowing you to do something like 'from lib import x'.'
+If you want to call a specific function, you can call from lib.x import fight' where fight is the name of the function and x is the name of the python file.
+There are a lot of standard libraries you can import from, which you can find online.
+Some common ones are:
+json, math, random, os, statistics, http, and urllib.
+
+# 4 #
+
+lambda functions are used to create simply arithmetic functions, which you can then use later on in your program. They can also be used with map,filter and reduce.
+
+# 5 #
+
+map is used to run a function upon each item in a datastructure, like a list, that can then be manipulated and changed, which can be very useful for different problems.
+You can easily do this with lambda functions, as the function that doubles or squares a number can be written as a lambda function.
+
+filter is a function that takes a 'filtering' function and a list, and based on the return value (True or False) for the item in the list, the list will be changed. 
+
+reduce functions are used to find the sum of a list of something. It creates a shorthand/quicker way to create a loop that would sum digits in a list.
+
+# 6 #
+
+recursion in python is similar to any other language, you just follow python syntax. It is very useful for intuitive and basic programming as long as the stack doesn't overflow due to too many functions being called.
+
+# 7 #
+
+decorators in python are ways to change how a function works. This done using the '@' symbol. This could be useful if you want to do analysis for a function, or if you wish to alter how it works without directly changing the function.
+
+# 8 #
+
+docstrings are just a different form of a comment that has a different look to it.
+
+"""Hello, i am a docstring """
+
+These are actually useful becuase if you run 
+print(help(x)) where x is a class, itll print all the other docstrings writen in that class to help you understand its function!
+
+# 9 #
+
+annotations are a useful way of writing down what a function should do, as you can specificy the data type that it should take in and return.
+
+# 10 #
+
+exceptions are useful, sort of like an if else statement. You can put somethin in the try block, and if that happens the exception will be called, preventing a logic error that prevents the user from progressing or understanding what happened.
+
+# 11 #
+
+pip is essential if you want to create a complex program, as different packages/libraries are avialable to download through using pip. 
+
+you can do 'pip install x' where x is the package you wish to install.
+Once something is installed, you can import it into your python files for your own use!
+
+# 12 #
+
+list compressions are a way to create lists very concisely.
+it's a very specific syntax, sort of like mapping functions, where you can copy a list but do a function on it.
+
+# 13 # 
+operator overloading is used to compare two objects within the same class together. It uses a __gt__ function, where different attributes can be entered and compared.
+'gt' is only used to for the greater than operator, but there are many different function names you can use for different functions like 
+__mod__ for the % operator
+__mul__ for the * operator
+__lshift__  for the << operator (left shits the bits by x places)
+__and__ for the & operator
+__or__ for the | operator
