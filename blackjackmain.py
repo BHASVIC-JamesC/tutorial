@@ -111,7 +111,7 @@ class Game:
                 player_hand.add_card(deck.deal(1))
                 dealer_hand.add_card(deck.deal(1))
 
-            print() # Imprime una línea vacía
+            print() 
             print("*" * 30)
             print(f"Game {game_number} of {games_to_play}")
             print("*" * 30)
@@ -123,7 +123,7 @@ class Game:
 
             choice = ""
             while player_hand.get_value() < 21 and choice not in ["s", "stand"]:
-                choice = input("Please choose 'Hit' or 'Stand': ").lower() # lower convertirá la respuesta del usuario a minúsculas
+                choice = input("Please choose 'Hit' or 'Stand': ").lower()  
                 print()
                 while choice not in ["h", "s", "hit", "stand"]:
                     choice = input("Please enter 'Hit' or 'Stand' (or H/S) ").lower()
@@ -159,7 +159,7 @@ class Game:
     def check_winner(self, player_hand, dealer_hand, game_over=False):
         if not game_over:
             if player_hand.get_value() > 21:
-                print("You busted. Dealer wins! lol") # He usado Windows + . para añadir el emoji
+                print("You busted. Dealer wins! lol") 
                 return True
             elif dealer_hand.get_value() > 21:
                 print("Dealer busted. You win! Hooray")
